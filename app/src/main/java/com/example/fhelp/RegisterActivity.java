@@ -3,6 +3,7 @@ package com.example.fhelp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this,"Passwords don't match",Toast.LENGTH_LONG).show();
                 }
                 else{
-                    Log.e("passequal","here");
+                    Log.v("passequal","here");
                     try {
                         jsonObject.put(getResources().getString(R.string.table_username),username.getText().toString());
                         jsonObject.put(getResources().getString(R.string.table_name),name.getText().toString());
@@ -66,7 +67,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void InitData(){
-        urlString = "http://192.168.1.25:5000/registration";//change it
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("farming_assistant",MODE_PRIVATE);
+        urlString = pref.getString("url","192") + "registration";
+//        Log.e("urlReg",urlString);
         username = findViewById(R.id.editText_username);
         name = findViewById(R.id.editText_name);
         dob = findViewById(R.id.editText_dob);

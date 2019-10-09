@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username,password;
     Button login;
     JSONObject jsonObject;
+    String urlString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,10 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.button_login);
         username = findViewById(R.id.editText_username);
         password = findViewById(R.id.editText_password);
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("farming_assistant",MODE_PRIVATE);
+        urlString = pref.getString("url","192") + "login";
+        Log.e("url",urlString);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-//                SharedPreferences pref = getApplicationContext().getSharedPreferences("farming_assistant",0);
-                String urlString = "http://192.168.1.25:5000/login";
+
                 URL url;
                 try {
                     url = new URL(urlString);
@@ -102,7 +106,6 @@ public class LoginActivity extends AppCompatActivity {
             editor.putInt("session",result);
             editor.commit();
 //            Log.e("session",String.valueOf(result));
-
         }
 
         String convertStreamToString(InputStream inputStream){
