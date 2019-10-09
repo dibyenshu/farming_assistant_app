@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">fhelp</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="username">Username:</string>
+    <string name="name">Full Name:</string>
+    <string name="dob">Date Of birth:</string>
+    <string name="phone_no">Phone Number:</string>
+    <string name="create_password">Create Password:</string>
+    <string name="confirm_password">Confirm password:</string>
+    <string name="email">Email ID:</string>
+    <string name="table_username">username</string>
+    <string name="table_name">name</string>
+    <string name="table_dob">dob</string>
+    <string name="table_location">location</string>
+    <string name="table_phoneNo">phoneNo</string>
+    <string name="table_email">email</string>
+    <string name="table_password">password</string>
+    <string name="table_type">type</string>
+</resources>
