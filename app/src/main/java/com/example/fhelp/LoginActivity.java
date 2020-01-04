@@ -103,9 +103,12 @@ public class LoginActivity extends AppCompatActivity {
             if(results!=null) result = results;
             SharedPreferences pref = getApplicationContext().getSharedPreferences("farming_assistant",0);
             SharedPreferences.Editor editor = pref.edit();
-            editor.putInt("session",result);
+            editor.putInt("sessionId",result);
+            //editor.putString("password",password.getText().toString());
             editor.commit();
 //            Log.e("session",String.valueOf(result));
+//            Start homepage activity
+
         }
 
         String convertStreamToString(InputStream inputStream){

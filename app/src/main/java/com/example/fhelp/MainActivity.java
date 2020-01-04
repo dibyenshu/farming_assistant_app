@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        urlString = "http://192.168.1.25:5000/";
+        urlString = "http://192.168.43.194:5000/";
         SharedPreferences pref = getApplicationContext().getSharedPreferences("farming_assistant",0);
         SharedPreferences.Editor editor = pref.edit();
         editor.putString("url",urlString);
