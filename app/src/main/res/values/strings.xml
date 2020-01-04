@@ -17,4 +17,7 @@
     <string name="table_email">email</string>
     <string name="table_password">password</string>
     <string name="table_type">type</string>
+    <string name="title_activity_user_home">UserHomeActivity</string>
+    <string name="tab_text_1">Crops</string>
+    <string name="tab_text_2">Notifications</string>
 </resources>
