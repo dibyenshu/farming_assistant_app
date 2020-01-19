@@ -1,13 +1,13 @@
 package com.example.fhelp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.net.HttpURLConnection;
 
@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        urlString = "http://192.168.43.194:5000/";
+        urlString = "http://192.168.1.25:5000/";
         SharedPreferences pref = getApplicationContext().getSharedPreferences("farming_assistant",0);
         SharedPreferences.Editor editor = pref.edit();
         editor.putString("url",urlString);
-        editor.commit();
+        editor.apply();
 
         Intent intent = getIntent();
         if(intent.getExtras() != null && intent.hasExtra("registration_result")){
