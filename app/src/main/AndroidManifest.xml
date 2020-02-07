@@ -13,6 +13,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".addCrop"
+            android:label="@string/title_activity_add_crop"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".UserHomeActivity"
             android:label="@string/title_activity_user_home"
             android:parentActivityName=".MainActivity"
