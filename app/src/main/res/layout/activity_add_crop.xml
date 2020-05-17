@@ -11,28 +11,205 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.6" />
 
-    <EditText
-        android:id="@+id/cropName"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
     <Button
         android:id="@+id/addCrop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="16dp"
         android:text="Add Crop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <RadioGroup
+        android:id="@+id/cropRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6">
+
+        <RadioButton
+            android:id="@+id/riceRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_rice" />
+
+        <RadioButton
+            android:id="@+id/wheatRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_wheat" />
+
+        <RadioButton
+            android:id="@+id/mungBeanRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_mungBean" />
+
+        <RadioButton
+            android:id="@+id/milletRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_millet" />
+
+        <RadioButton
+            android:id="@+id/teaRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_tea" />
+
+        <RadioButton
+            android:id="@+id/maizeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_maize" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/precipitationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/details_precipitation"
+        app:layout_constraintBaseline_toBaselineOf="@+id/precipitationEditText"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/tempTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/details_temp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tempEditText"
+        app:layout_constraintEnd_toStartOf="@+id/tempEditText" />
+
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/details_humidity"
+        app:layout_constraintBaseline_toBaselineOf="@+id/humidityEditText"
+        app:layout_constraintEnd_toStartOf="@+id/humidityEditText" />
+
+    <TextView
+        android:id="@+id/moistureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/details_moisture"
+        app:layout_constraintBaseline_toBaselineOf="@+id/moistureEditText"
+        app:layout_constraintEnd_toStartOf="@+id/moistureEditText" />
+
+    <TextView
+        android:id="@+id/soilTempTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/details_soilTemp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/soilTempEditText"
+        app:layout_constraintEnd_toStartOf="@+id/soilTempEditText" />
+
+    <TextView
+        android:id="@+id/phTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/details_ph"
+        app:layout_constraintBaseline_toBaselineOf="@+id/phEditText"
+        app:layout_constraintEnd_toStartOf="@+id/phEditText" />
+
+    <TextView
+        android:id="@+id/watePhTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/details_waterPh"
+        app:layout_constraintBaseline_toBaselineOf="@+id/waterPhEditText"
+        app:layout_constraintEnd_toStartOf="@+id/waterPhEditText" />
+
+    <EditText
+        android:id="@+id/precipitationEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/tempEditText"
+        app:layout_constraintStart_toEndOf="@+id/precipitationTextView" />
+
+    <EditText
+        android:id="@+id/phEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/waterPhEditText"
+        app:layout_constraintStart_toStartOf="@+id/soilTempEditText" />
+
+    <EditText
+        android:id="@+id/moistureEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/soilTempEditText"
+        app:layout_constraintStart_toStartOf="@+id/humidityEditText" />
+
+    <EditText
+        android:id="@+id/soilTempEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/phEditText"
+        app:layout_constraintStart_toStartOf="@+id/moistureEditText" />
+
+    <EditText
+        android:id="@+id/waterPhEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/phEditText" />
+
+    <EditText
+        android:id="@+id/tempEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/humidityEditText"
+        app:layout_constraintStart_toStartOf="@+id/precipitationEditText" />
+
+    <EditText
+        android:id="@+id/humidityEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/moistureEditText"
+        app:layout_constraintStart_toStartOf="@+id/tempEditText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

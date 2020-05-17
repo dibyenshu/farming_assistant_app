@@ -21,4 +21,17 @@
     <string name="title_activity_add_crop">addCrop</string>
     <string name="tab_text_1">Crops</string>
     <string name="tab_text_2">Notifications</string>
+    <string name="crop_rice">rice</string>
+    <string name="crop_wheat">wheat</string>
+    <string name="crop_mungBean">mungBean</string>
+    <string name="crop_millet">millet</string>
+    <string name="crop_tea">tea</string>
+    <string name="crop_maize">maize</string>
+    <string name="details_precipitation">precipitation</string>
+    <string name="details_temp">temp</string>
+    <string name="details_humidity">humidity</string>
+    <string name="details_moisture">moisture</string>
+    <string name="details_soilTemp">soil_temp</string>
+    <string name="details_ph">ph</string>
+    <string name="details_waterPh">water_ph</string>
 </resources>
