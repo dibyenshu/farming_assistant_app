@@ -8,11 +8,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -110,6 +112,14 @@ public class addCrop extends AppCompatActivity {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(Integer result) {
+            super.onPostExecute(result);
+            if(result == 200) Toast.makeText(getApplicationContext(),"Successfully added crop", Toast.LENGTH_LONG).show();
+            else Toast.makeText(getApplicationContext(),"Error in adding crop", Toast.LENGTH_LONG).show();
+            finish();
         }
     }
 
