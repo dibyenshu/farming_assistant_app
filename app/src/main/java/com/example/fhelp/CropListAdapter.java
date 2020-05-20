@@ -1,5 +1,6 @@
 package com.example.fhelp;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +29,16 @@ public class CropListAdapter extends RecyclerView.Adapter<CropListAdapter.CropLi
 
     @Override
     public void onBindViewHolder(@NonNull CropListViewHolder holder, int position) {
-        String cropName = cropList.get(position);
+        final String cropName = cropList.get(position);
         holder.textView.setText(cropName);
+        holder.textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),CropDetailsActivity.class);
+                intent.putExtra("cropName",cropName);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

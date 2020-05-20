@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".CropDetailsActivity"></activity>
         <activity
             android:name=".addCrop"
             android:label="@string/title_activity_add_crop"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UserHomeActivity"
             android:label="@string/title_activity_user_home"
